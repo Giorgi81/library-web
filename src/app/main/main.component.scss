@@ -1,0 +1,31 @@
+.blog-form {
+  margin: 16px 0;
+}
+
+.mat-form-field {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.example-button-row {
+  text-align: center;
+  margin-top: 16px;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.card {
+  width: 100%;
+  max-width: 400px;
+}
+
+.mat-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

@@ -1,1 +1,47 @@
-<p>main works!</p>
+<div class="blog-form">
+  <mat-card [ngClass]="{ 'default-hidden': !isAddingPost }">
+    <mat-form-field appearance="fill">
+      <mat-label>Book</mat-label>
+      <input matInput type="text" id="author-input" #author placeholder="Book" />
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>User</mat-label>
+      <input matInput type="text" id="title-input" #title placeholder="User" />
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Description</mat-label>
+      <textarea matInput id="description-input" placeholder="Description" #desc></textarea>
+    </mat-form-field>
+
+    <button mat-flat-button color="primary" (click)="addElement(author, title, desc)">
+      Add Book
+    </button>
+  </mat-card>
+  <section id="section">
+    <div class="example-button-row">
+      <button mat-stroked-button color="accent" (click)="toggleAddPost()">
+        {{ isAddingPost ? "Cancel" : "Add Your Blog" }}
+      </button>
+    </div>
+  </section>
+</div>
+
+<div class="card-container">
+  <mat-card *ngFor="let post of postsList" class="card" #element>
+    <mat-card-header>
+      <mat-card-title>{{ post.book }}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p class="card-date">{{ post.date | date : "short" }}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button color="primary" (click)="goToDetailsPage(post.id)">
+        Details
+      </button>
+      <button mat-button color="warn" (click)="remove(post.id)">
+        Remove
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+
