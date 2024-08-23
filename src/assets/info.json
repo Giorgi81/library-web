@@ -1,0 +1,33 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "author": "Steven Levy's",
+      "title": "Facebook will start hiding spam public posts from users sharing 'vast amounts per day'",
+      "date": "2023-1-11",
+      "description": "Facebook is due to start hiding posts from people who spam users' news feed with clickbait, sensationalised and misinformative articles. In a statement, the social media giant said it was making the update in users' news feed. Facebook said it carried out research which showed that a small group of users were, which was effectively spamming people's feeds.      "
+    },
+    {
+      "id": 2,
+      "title": "Facebook announces new comment and sorting tools for users to control their News Feed",
+      "author": "Chloe Farand",
+      "date": "2023-10-12",
+      "description": "Facebook has announced that it is giving users more options over the ordering of their news feed. Users are now able to choose between having the News Feed, the home page of Facebook, ordered either chronologically or algorithmically. There is also the option to rank the home page by what Facebook calls your “Favourites”, whereby 30 chosen friends and pages will be shown higher in the feed than content from other sources. For all users, this ‘Favourites’ option will be accessible in Facebook’s settings."
+    },
+    {
+      "id": 3,
+      "title": "Molly White Tracks Crypto Scams.",
+      "author": "Emily Smith",
+      "date": "2023-10-10",
+      "description": "BKC Affiliate Molly White discusses her blog, Web3 Is Going Just Great, that tracks crypto scams and hacks. Occasionally, White resents the obligation to think, write, and speak about crypto when she could instead be doing something that drives in a positive direction. But then she reminds herself: 'Sometimes, the most important thing is to not let the wheels turn in reverse."
+    },
+    {
+      "id": 4,
+      "title": "Different types of Learning Management Systems",
+      "author": "Staff Reporter",
+      "date": "2023-10-17",
+      "description": "Learning never stops because knowledge is limitless. And the corporate world knows it better than most. Employee training, HR training, and customer training, etc are only small representations of the many training and development courses organizations try to incorporate in the workplace. This helps bring more Productivity to the business and also helps everyone involved improve."
+    }
+  ]
+
+}
