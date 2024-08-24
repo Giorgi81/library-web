@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import posts from '../../src/db.json';
-import {Info} from "./main/interface";
+import posts from '../../db.json';
+import {Info} from "../main/interface";
 
 
 
@@ -9,15 +9,11 @@ import {Info} from "./main/interface";
 })
 export class DetailsService {
 
-  getItemById(id: number): any {
-    throw new Error('Method not implemented.');
-  }
+
 
   private item!: Info | undefined;
 
-  constructor() {
-    this.item = posts.posts[5];
-  }
+
 
   setItem(itemReceived: Info) {
     this.item = itemReceived;

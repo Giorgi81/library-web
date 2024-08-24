@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
-import {DetailsService} from "../details.service";
+import {DetailsService} from "../services/details.service";
 
 @Component({
   selector: 'app-desc',

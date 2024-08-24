@@ -2,32 +2,28 @@ import { Component, OnInit } from '@angular/core';
 import posts from '../../db.json';
 import { Info } from './interface';
 import { Router } from '@angular/router';
-import { HttpClient } from '@angular/common/http';
-import { DetailsService } from '../details.service';
-import { DataService } from '../data.service';
+import { DetailsService } from '../services/details.service';
 import { DatePipe, NgClass, NgForOf } from '@angular/common';
-import { MatButtonModule } from '@angular/material/button';
-import { MatInputModule } from '@angular/material/input';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatCardModule } from '@angular/material/card';
+import {MaterialModule} from "../material/material.module";
 
-interface BlogPost {
-  id: any;
-  book: any;
-  user: any;
-  date?: any;
-  description: any;
-}
+
+
 
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.scss'],
-  imports: [NgClass, DatePipe, NgForOf, MatButtonModule, MatInputModule, MatFormFieldModule, MatCardModule],
+  imports: [
+    NgClass,
+    DatePipe,
+    NgForOf,
+    MaterialModule
+
+  ],
   standalone: true,
 })
 export class MainComponent implements OnInit {
-  randomDate = new Date();
+  // randomDate = new Date();
   postsList: Info[] = [];
   currentItem: Info | undefined;
   isAddingPost: boolean = false;
@@ -35,8 +31,6 @@ export class MainComponent implements OnInit {
   constructor(
     private router: Router,
     private DetailsService: DetailsService,
-    private DataService: DataService,
-    private http: HttpClient
   ) {}
 
   ngOnInit(): void {
@@ -58,29 +52,25 @@ export class MainComponent implements OnInit {
     }
   }
 
-  toggleAddPost() {
-    this.isAddingPost = !this.isAddingPost;
-  }
 
-  addElement(user: any, book: any, desc: any) {
-    const newPost: BlogPost = {
+
+  addElement(user: any, book: any) {
+    const newPost: Info = {
       id: this.postsList.length + 1,
       book: book.value,
       user: user.value,
       date: new Date().toISOString(),
-      description: desc.value,
+
+
     };
 
     this.postsList.unshift(newPost);
     this.savePostsToLocalStorage();
 
-    this.DataService.addPost(newPost).subscribe((response: any) => {
-      console.log('Response from addPost:', response);
-    });
+
 
     book.value = '';
     user.value = '';
-    desc.value = '';
   }
 
   savePostsToLocalStorage() {

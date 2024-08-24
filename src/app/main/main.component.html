@@ -1,29 +1,20 @@
 <div class="blog-form">
   <mat-card [ngClass]="{ 'default-hidden': !isAddingPost }">
     <mat-form-field appearance="fill">
-      <mat-label>Book</mat-label>
-      <input matInput type="text" id="author-input" #author placeholder="Book" />
-    </mat-form-field>
-    <mat-form-field appearance="fill">
       <mat-label>User</mat-label>
-      <input matInput type="text" id="title-input" #title placeholder="User" />
+      <input matInput type="text" id="author-input" #user placeholder="User" />
     </mat-form-field>
     <mat-form-field appearance="fill">
-      <mat-label>Description</mat-label>
-      <textarea matInput id="description-input" placeholder="Description" #desc></textarea>
+      <mat-label>Book</mat-label>
+      <input matInput type="text" id="title-input" #book placeholder="Book" />
     </mat-form-field>
 
-    <button mat-flat-button color="primary" (click)="addElement(author, title, desc)">
+
+    <button mat-flat-button color="primary" (click)="addElement(user, book)">
       Add Book
     </button>
   </mat-card>
-  <section id="section">
-    <div class="example-button-row">
-      <button mat-stroked-button color="accent" (click)="toggleAddPost()">
-        {{ isAddingPost ? "Cancel" : "Add Your Blog" }}
-      </button>
-    </div>
-  </section>
+
 </div>
 
 <div class="card-container">

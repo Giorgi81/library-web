@@ -1,7 +1,6 @@
 export interface Info {
-  id: any;
-  book: any;
-  user: any;
-  date?: any;
-  description: any;
+  id: number;
+  book: string;
+  user: string;
+  date?: string;
 }
