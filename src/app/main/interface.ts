@@ -3,4 +3,7 @@ export interface Info {
   book: string;
   user: string;
   date?: string;
+  fromPick : string;
+  toPick : string;
+  details : string;
 }

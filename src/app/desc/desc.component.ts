@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 import {DetailsService} from "../services/details.service";
+import {MaterialModule} from "../material/material.module";
+import {DatePipe} from "@angular/common";
 
 @Component({
   selector: 'app-desc',
   standalone: true,
-  imports: [],
+  imports: [MaterialModule, DatePipe],
   templateUrl: './desc.component.html',
   styleUrl: './desc.component.scss'
 })

@@ -1,31 +1,41 @@
 .blog-form {
-  margin: 16px 0;
-}
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
 
-.mat-form-field {
-  width: 100%;
-  margin-bottom: 16px;
-}
+  .form-card {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+  }
 
-.example-button-row {
-  text-align: center;
-  margin-top: 16px;
+  .inputs {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .date-pickers {
+    display: flex;
+    justify-content: space-between;
+
+    mat-form-field {
+      width: 48%;
+    }
+  }
 }
 
 .card-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 16px;
-  margin-top: 24px;
+  gap: 15px;
+  justify-content: center;
+
+  .card {
+    width: 300px;
+  }
 }
 
-.card {
-  width: 100%;
-  max-width: 400px;
-}
-
-.mat-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+.card-date {
+  font-weight: 500;
+  color: #555;
 }

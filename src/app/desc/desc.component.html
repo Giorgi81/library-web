@@ -1,12 +1,21 @@
 <div class="cont">
+  <mat-card class="card">
+    <mat-card-header>
+      <mat-card-title>{{ currentItem?.user }}</mat-card-title>
+      <mat-card-subtitle>{{ currentItem?.book }}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <p class="date">{{ currentItem?.fromPick | date:'shortDate' }}</p>
+      <p class="date">{{ currentItem?.toPick | date:'shortDate' }}</p>
 
-  <div class="card">
-    <div class="card-content">
-      <h2>{{ currentItem?.user }}</h2>
-      <p>{{ currentItem?.book }}</p>
-      <p class="description">{{ currentItem?.description }}</p>
-      <p class="date">{{ currentItem?.date }}</p>
-    </div>
-  </div>
+    </mat-card-content>
+    <mat-card-content>
+
+
+      <p class="details">{{currentItem?.details}}</p>
+
+
+    </mat-card-content>
+
+  </mat-card>
 </div>
-

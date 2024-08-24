@@ -1,0 +1,27 @@
+.cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  padding: 50px;
+}
+
+.card {
+  max-width: 600px;
+  width: 100%;
+  padding: 50px;
+}
+
+.description {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+.date {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #777;
+}
+
+

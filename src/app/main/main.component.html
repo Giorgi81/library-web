@@ -1,38 +1,89 @@
 <div class="blog-form">
-  <mat-card [ngClass]="{ 'default-hidden': !isAddingPost }">
-    <mat-form-field appearance="fill">
-      <mat-label>User</mat-label>
-      <input matInput type="text" id="author-input" #user placeholder="User" />
-    </mat-form-field>
-    <mat-form-field appearance="fill">
-      <mat-label>Book</mat-label>
-      <input matInput type="text" id="title-input" #book placeholder="Book" />
-    </mat-form-field>
+  <mat-card [ngClass]="{ 'default-hidden': !isAddingPost }" class="form-card">
+    <form [formGroup]="postForm" (ngSubmit)="addElement()">
 
+      <div class="inputs">
+        <mat-form-field appearance="fill">
+          <mat-label>User</mat-label>
+          <input matInput type="text" formControlName="user" placeholder="User" />
+          <mat-error *ngIf="postForm.get('user')?.hasError('required') && postForm.get('user')?.touched">
+            User is required.
+          </mat-error>
+          <mat-error *ngIf="postForm.get('user')?.hasError('minlength') && postForm.get('user')?.touched">
+            Minimum 2 characters required.
+          </mat-error>
+        </mat-form-field>
 
-    <button mat-flat-button color="primary" (click)="addElement(user, book)">
-      Add Book
-    </button>
+        <mat-form-field appearance="fill">
+          <mat-label>Book</mat-label>
+          <input matInput type="text" formControlName="book" placeholder="Book" />
+          <mat-error *ngIf="postForm.get('book')?.hasError('required') && postForm.get('book')?.touched">
+            Book is required.
+          </mat-error>
+          <mat-error *ngIf="postForm.get('book')?.hasError('minlength') && postForm.get('book')?.touched">
+            Minimum 2 characters required.
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Book Description</mat-label>
+          <textarea matInput
+                    cdkTextareaAutosize
+                    #autosize="cdkTextareaAutosize"
+                    cdkAutosizeMinRows="1"
+                    cdkAutosizeMaxRows="5"
+                    formControlName="details"
+                    placeholder="Enter book description">
+          </textarea>
+          <mat-error *ngIf="postForm.get('details')?.hasError('required') && postForm.get('details')?.touched">
+            Description is required.
+          </mat-error>
+        </mat-form-field>
+      </div>
+
+      <!-- Date Pickers -->
+      <div class="date-pickers">
+        <mat-form-field class="example-full-width">
+          <mat-label>Take Book From</mat-label>
+          <input matInput [matDatepicker]="fromPicker" formControlName="fromPick" [min]="today">
+          <mat-datepicker-toggle matIconSuffix [for]="fromPicker"></mat-datepicker-toggle>
+          <mat-datepicker #fromPicker></mat-datepicker>
+          <mat-error *ngIf="postForm.get('fromPick')?.hasError('required') && postForm.get('fromPick')?.touched">
+            Start date is required.
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <mat-label>Take Book To</mat-label>
+          <input matInput [matDatepicker]="toPicker" formControlName="toPick" [min]="today">
+          <mat-datepicker-toggle matIconSuffix [for]="toPicker"></mat-datepicker-toggle>
+          <mat-datepicker #toPicker></mat-datepicker>
+          <mat-error *ngIf="postForm.get('toPick')?.hasError('required') && postForm.get('toPick')?.touched">
+            End date is required.
+          </mat-error>
+        </mat-form-field>
+      </div>
+
+      <button mat-flat-button color="primary" type="submit" [disabled]="postForm.invalid">
+        Add Book
+      </button>
+    </form>
   </mat-card>
-
 </div>
 
 <div class="card-container">
-  <mat-card *ngFor="let post of postsList" class="card" #element>
+  <mat-card *ngFor="let post of postsList" class="card">
     <mat-card-header>
       <mat-card-title>{{ post.book }}</mat-card-title>
     </mat-card-header>
     <mat-card-content>
-      <p class="card-date">{{ post.date | date : "short" }}</p>
+      <p class="card-date">From: {{ post.fromPick | date: 'shortDate' }}</p>
+      <p class="card-date">To: {{ post.toPick | date: 'shortDate' }}</p>
+      <p>{{ post.details }}</p>
     </mat-card-content>
     <mat-card-actions>
-      <button mat-button color="primary" (click)="goToDetailsPage(post.id)">
-        Details
-      </button>
-      <button mat-button color="warn" (click)="remove(post.id)">
-        Remove
-      </button>
+      <button mat-button color="primary" (click)="goToDetailsPage(post.id)">Details</button>
+      <button mat-button color="warn" (click)="remove(post.id)">Remove</button>
     </mat-card-actions>
   </mat-card>
 </div>
-

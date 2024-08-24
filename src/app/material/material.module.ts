@@ -4,6 +4,10 @@ import {MatButtonModule} from "@angular/material/button";
 import {MatInputModule} from "@angular/material/input";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatCardModule} from "@angular/material/card";
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatIcon, MatIconModule} from '@angular/material/icon';
+
+
 
 
 
@@ -12,7 +16,9 @@ import {MatCardModule} from "@angular/material/card";
     MatButtonModule,
     MatInputModule,
     MatFormFieldModule,
-    MatCardModule
+    MatCardModule,
+    MatDatepickerModule,
+    MatIconModule
 
   ],
   declarations: [],
