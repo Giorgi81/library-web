@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router, RouterLink} from "@angular/router";
 import {MaterialModule} from "../material/material.module";
 import {DatePipe} from "@angular/common";
@@ -11,7 +11,7 @@ import {DetailsService} from "../shared/services/details.service";
   templateUrl: './desc.component.html',
   styleUrl: './desc.component.scss'
 })
-export class DescComponent {
+export class DescComponent implements OnInit{
 
   currentItem: any;
 
@@ -19,10 +19,17 @@ export class DescComponent {
     private route: ActivatedRoute,
     private detailsService: DetailsService,
   ) {
+
+  }
+
+
+  ngOnInit() {
     const id = this.route.snapshot.paramMap.get('id');
-    if (id) {
-      this.currentItem = this.detailsService.getItem();
+    const items : any[] = JSON.parse(localStorage.getItem('postsList') || '');
+    if(items?.length) {
+      this.currentItem = items?.find((item) => item.id == id)
     }
+
   }
 
 }

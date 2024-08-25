@@ -42,12 +42,25 @@ export class MainComponent implements OnInit {
       toPick: [null, Validators.required],
       details: ['', Validators.required]
     });
+
+
+
+
+
   }
+
+
 
   ngOnInit(): void {
     const storedPostsList = JSON.parse(localStorage.getItem('postsList') || '[]');
     this.postsList = storedPostsList.length ? storedPostsList : posts.posts;
     this.currentItem = this.detailsService.getItem();
+
+
+
+
+
+
   }
 
   goToDetailsPage(id: number): void {
@@ -61,21 +74,41 @@ export class MainComponent implements OnInit {
     }
   }
 
+
+
   addElement(): void {
+
+    const {
+      user,
+      book,
+      fromPick,
+      toPick,
+      details
+    } = this.postForm.value
+
     if (this.postForm.valid) {
       const newPost: Info = {
         id: this.postsList.length + 1,
-        user: this.postForm.get('user')?.value,
-        book: this.postForm.get('book')?.value,
-        fromPick: this.postForm.get('fromPick')?.value,
-        toPick: this.postForm.get('toPick')?.value,
-        details: this.postForm.get('details')?.value
+        user,
+        book,
+        fromPick,
+        toPick,
+        details
+
       };
 
       this.postsList.unshift(newPost);
       this.savePostsToLocalStorage();
       this.postForm.reset({fromPick: this.today, toPick: null});
     }
+
+    const controls : any = this.postForm?.controls;
+    for(const c of Object.values(controls)){
+      const ad : any = c
+      ad.markAsPristine()
+      ad.setErrors(null)
+    }
+
   }
 
   savePostsToLocalStorage(): void {
