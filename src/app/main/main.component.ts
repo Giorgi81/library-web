@@ -40,7 +40,7 @@ export class MainComponent implements OnInit {
       book: ['', [Validators.required, Validators.minLength(2)]],
       fromPick: [this.today, Validators.required],
       toPick: [null, Validators.required],
-      details: ['', Validators.required]  // Added 'details' field
+      details: ['', Validators.required]
     });
   }
 

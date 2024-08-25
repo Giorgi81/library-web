@@ -1,4 +1,4 @@
-.blog-form {
+.post-form {
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
@@ -7,19 +7,25 @@
     width: 100%;
     max-width: 600px;
     padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
   }
 
   .inputs {
     display: flex;
     flex-direction: column;
+    gap: 15px;
   }
 
   .date-pickers {
     display: flex;
     justify-content: space-between;
+    gap: 10px;
 
     mat-form-field {
-      width: 48%;
+      width: 100%;
     }
   }
 }
@@ -27,29 +33,74 @@
 .card-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 15px;
+  gap: 20px;
   justify-content: center;
+  margin-top: 20px;
 
   .card {
     width: 300px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    overflow: hidden;
+
+    &:hover {
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+      transform: translateY(-5px);
+    }
+
+    mat-card-header {
+      background-color: #fafafa;
+      border-bottom: 1px solid #e0e0e0;
+      padding: 15px;
+    }
+
+    mat-card-subtitle {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    mat-card-content {
+      padding: 15px;
+      font-size: 14px;
+      color: #333;
+    }
+
+    mat-card-actions {
+      background-color: #fafafa;
+      border-top: 1px solid #e0e0e0;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+
+      button {
+        font-weight: bold;
+      }
+    }
   }
 }
 
 .card-date {
   font-weight: 500;
   color: #555;
+  margin: 5px 0;
 }
 
 .description-label {
   font-weight: bold;
-  width: 80px;
+  color: #333;
 }
 
 .subtitle-label {
   font-weight: bold;
+  color: #333;
   margin-right: 5px;
 }
 
 .subtitle-value {
   font-weight: normal;
+  color: #666;
 }

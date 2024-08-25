@@ -11,6 +11,19 @@
   max-width: 600px;
   width: 100%;
   padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+}
+
+.card-section {
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.card-section:last-child {
+  border-bottom: none;
 }
 
 .info-row {

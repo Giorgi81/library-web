@@ -1,4 +1,4 @@
-<div class="blog-form">
+<div class="post-form">
   <mat-card [ngClass]="{ 'default-hidden': !isAddingPost }" class="form-card">
     <form [formGroup]="postForm" (ngSubmit)="addElement()">
 
@@ -35,9 +35,6 @@
                     formControlName="details"
                     placeholder="Enter book description">
           </textarea>
-          <mat-error *ngIf="postForm.get('details')?.hasError('required') && postForm.get('details')?.touched">
-            Description is required.
-          </mat-error>
         </mat-form-field>
       </div>
 
@@ -88,7 +85,7 @@
     <mat-card-content>
       <p><span class="description-label">From:</span> {{ post.fromPick | date: 'shortDate' }}</p>
       <p><span class="description-label">To:</span> {{ post.toPick | date: 'shortDate' }}</p>
-      <p><span class="description-label">Description:</span> {{ post.details }}</p>
+      <!-- Description is not shown here -->
     </mat-card-content>
     <mat-card-actions>
       <button mat-button color="primary" (click)="goToDetailsPage(post.id)">Details</button>
