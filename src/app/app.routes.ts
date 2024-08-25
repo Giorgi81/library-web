@@ -10,3 +10,5 @@ export const routes: Routes = [
   {path: 'main', component: MainComponent, canActivate:[authGuard]},
   {path: 'desc/:id', component: DescComponent}
 ];
+
+
