@@ -1,17 +1,25 @@
 <div class="cont">
   <mat-card class="card">
     <mat-card-header>
-      <mat-card-title>{{ currentItem?.user }}</mat-card-title>
-      <mat-card-subtitle>{{ currentItem?.book }}</mat-card-subtitle>
+      <mat-card-subtitle>User: {{ currentItem?.user }}</mat-card-subtitle>
+      <mat-card-subtitle>Book Title: {{ currentItem?.book }}</mat-card-subtitle>
     </mat-card-header>
 
     <mat-card-content>
-      <p class="date">{{ currentItem?.fromPick | date:'shortDate' }}</p>
-      <p class="date">{{ currentItem?.toPick | date:'shortDate' }}</p>
-    </mat-card-content>
+      <div class="info-row">
+        <span class="info-label">Date From:</span>
+        <span class="info-value">{{ currentItem?.fromPick | date: 'shortDate' }}</span>
+      </div>
 
-    <mat-card-content>
-      <p class="details">{{currentItem?.details}}</p>
+      <div class="info-row">
+        <span class="info-label">Date To:</span>
+        <span class="info-value">{{ currentItem?.toPick | date: 'shortDate' }}</span>
+      </div>
+
+      <div class="info-row">
+        <span class="info-label">Details:</span>
+        <span class="info-value">{{ currentItem?.details }}</span>
+      </div>
     </mat-card-content>
   </mat-card>
 </div>

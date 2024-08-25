@@ -1,26 +1,31 @@
 .cont {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   margin: 20px;
   padding: 50px;
+  height: calc(100vh - 100px);
 }
 
 .card {
   max-width: 600px;
   width: 100%;
-  padding: 50px;
+  padding: 20px;
 }
 
-.description {
+.info-row {
+  display: flex;
+  justify-content: space-between;
   margin-top: 10px;
+}
+
+.info-label {
+  font-weight: bold;
   font-size: 16px;
   color: #333;
 }
 
-.date {
-  margin-top: 10px;
+.info-value {
   font-size: 14px;
   color: #777;
 }
-
