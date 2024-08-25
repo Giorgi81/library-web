@@ -4,25 +4,33 @@
       "id": 1,
       "book": "Harry Potter",
       "user": "Andrew Smith",
-      "details": "Harry Potter, fictional character, a boy wizard created by British author J.K. Rowling. His coming-of-age exploits were the subject of seven enormously popular novels (1997–2007), which were adapted into eight films (2001–11); a play and a book of its script appeared in 2016."
+      "details": "Harry Potter, fictional character, a boy wizard created by British author J.K. Rowling...",
+      "fromPick": "2024-08-01",
+      "toPick": "2024-08-15"
     },
     {
       "id": 2,
       "book": "The Metamorphosis",
       "user": "Chloe Farand",
-      "details": "The Metamorphosis (German: Die Verwandlung), also translated as The Transformation,[1] is a novella by Franz Kafka published in 1915. One of Kafka's best-known works, The Metamorphosis tells the story of salesman Gregor Samsa, who wakes one morning to find himself inexplicably transformed into a huge insect (German: ungeheueres Ungeziefer, lit. \"monstrous vermin\") and struggles to adjust to this condition. The novella has been widely discussed among literary critics, who have offered varied interpretations. In popular culture and adaptations of the novella, the insect is commonly depicted as a cockroach."
+      "details": "The Metamorphosis (German: Die Verwandlung), also translated as The Transformation...",
+      "fromPick": "2024-08-10",
+      "toPick": "2024-08-20"
     },
     {
       "id": 3,
       "book": "The Brothers Karamazov",
       "user": "Emily Smith",
-      "details": "The Brothers Karamazov (Russian: Бра́тья Карама́зовы, Brát'ya Karamázovy, pronounced [ˈbratʲjə kərɐˈmazəvɨ]), also translated as The Karamazov Brothers, is the last novel by Russian author Fyodor Dostoevsky. Dostoevsky spent nearly two years writing The Brothers Karamazov, which was published as a serial in The Russian Messenger from January 1879 to November 1880. Dostoevsky died less than four months after its publication. It has been acclaimed as one of the supreme achievements in world literature."
+      "details": "The Brothers Karamazov (Russian: Бра́тья Карама́зовы, Brát'ya Karamázovy)...",
+      "fromPick": "2024-08-05",
+      "toPick": "2024-08-25"
     },
     {
       "id": 4,
       "book": "The Stranger",
       "user": "Staff Reporter",
-      "details": "Written by Albert Camus in 1942, The Stranger tells the story of the assassination of an Arab man who is never named. This story demonstrates the depths of human apathy as the main character, Meursault, is put on trial for the murder of the man."
+      "details": "Written by Albert Camus in 1942, The Stranger tells the story of the assassination...",
+      "fromPick": "2024-08-12",
+      "toPick": "2024-08-22"
     }
   ]
 }
