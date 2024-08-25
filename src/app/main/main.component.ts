@@ -94,7 +94,6 @@ export class MainComponent implements OnInit {
         fromPick,
         toPick,
         details
-
       };
 
       this.postsList.unshift(newPost);
