@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
 import {FormsModule} from '@angular/forms';
 import {NgIf} from '@angular/common';
-import {AuthService} from '../services/auth.service';
+import {AuthService} from '../shared/services/auth.service';
 import {Router} from "@angular/router";
 
 @Component({
@@ -25,8 +25,6 @@ export class LoginComponent {
 
       this.authService.saveLoginData(loginData);
       this.router.navigate(['/main'])
-
-
     }
   }
 }

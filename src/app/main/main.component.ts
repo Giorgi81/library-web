@@ -1,9 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
 import posts from '../../db.json';
-import {Info} from './interface';
+import {Info} from '../shared/interface/info.interface';
 import {Router} from '@angular/router';
-import {DetailsService} from '../services/details.service';
+import {DetailsService} from '../shared/services/details.service';
 import {DatePipe, NgClass, NgForOf, NgIf} from '@angular/common';
 import {MaterialModule} from '../material/material.module';
 

@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
-import posts from '../../db.json';
-import {Info} from "../main/interface";
+import posts from '../../../db.json';
+import {Info} from "../interface/info.interface";
 
 
 @Injectable({
