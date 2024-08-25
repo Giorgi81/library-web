@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
@@ -6,7 +6,8 @@ import { Injectable } from '@angular/core';
 export class AuthService {
 
 
-  constructor() {}
+  constructor() {
+  }
 
   saveLoginData(loginData: any) {
     localStorage.setItem('loginData', JSON.stringify(loginData));

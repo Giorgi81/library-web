@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import {Component, OnInit} from '@angular/core';
+import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
 import posts from '../../db.json';
-import { Info } from './interface';
-import { Router } from '@angular/router';
-import { DetailsService } from '../services/details.service';
-import { DatePipe, NgClass, NgForOf, NgIf } from '@angular/common';
-import { MaterialModule } from '../material/material.module';
+import {Info} from './interface';
+import {Router} from '@angular/router';
+import {DetailsService} from '../services/details.service';
+import {DatePipe, NgClass, NgForOf, NgIf} from '@angular/common';
+import {MaterialModule} from '../material/material.module';
 
 @Component({
   selector: 'app-main',
@@ -74,7 +74,7 @@ export class MainComponent implements OnInit {
 
       this.postsList.unshift(newPost);
       this.savePostsToLocalStorage();
-      this.postForm.reset({ fromPick: this.today, toPick: null });
+      this.postForm.reset({fromPick: this.today, toPick: null});
     }
   }
 

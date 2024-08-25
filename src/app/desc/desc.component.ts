@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 import {DetailsService} from "../services/details.service";
 import {MaterialModule} from "../material/material.module";

@@ -1,7 +1,6 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import posts from '../../db.json';
 import {Info} from "../main/interface";
-
 
 
 @Injectable({
@@ -10,9 +9,7 @@ import {Info} from "../main/interface";
 export class DetailsService {
 
 
-
   private item!: Info | undefined;
-
 
 
   setItem(itemReceived: Info) {

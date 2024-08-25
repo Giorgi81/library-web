@@ -5,7 +5,7 @@
       <div class="inputs">
         <mat-form-field appearance="fill">
           <mat-label>User</mat-label>
-          <input matInput type="text" formControlName="user" placeholder="User" />
+          <input matInput type="text" formControlName="user" placeholder="User"/>
           <mat-error *ngIf="postForm.get('user')?.hasError('required') && postForm.get('user')?.touched">
             User is required.
           </mat-error>
@@ -16,7 +16,7 @@
 
         <mat-form-field appearance="fill">
           <mat-label>Book</mat-label>
-          <input matInput type="text" formControlName="book" placeholder="Book" />
+          <input matInput type="text" formControlName="book" placeholder="Book"/>
           <mat-error *ngIf="postForm.get('book')?.hasError('required') && postForm.get('book')?.touched">
             Book is required.
           </mat-error>
