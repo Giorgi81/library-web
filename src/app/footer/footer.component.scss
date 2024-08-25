@@ -1,0 +1,31 @@
+footer {
+  background: darkgrey;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-content {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.footer-content a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.footer-content img.footer-logo {
+  height: 20px;
+  width: auto;
+  margin-right: 8px;
+}
+
+.footer-content a:hover {
+  text-decoration: underline;
+}
