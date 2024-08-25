@@ -32,4 +32,6 @@ export class DescComponent implements OnInit{
 
   }
 
+
+
 }
