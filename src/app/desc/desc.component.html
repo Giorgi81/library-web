@@ -1,25 +1,9 @@
-<div class="cont">
-  <mat-card class="card">
-    <mat-card-header>
-      <mat-card-subtitle>User: {{ currentItem?.user }}</mat-card-subtitle>
-      <mat-card-subtitle>Book Title: {{ currentItem?.book }}</mat-card-subtitle>
-    </mat-card-header>
 
-    <mat-card-content>
-      <div class="info-row">
-        <span class="info-label">Date From:</span>
-        <span class="info-value">{{ currentItem?.fromPick | date: 'shortDate' }}</span>
-      </div>
-
-      <div class="info-row">
-        <span class="info-label">Date To:</span>
-        <span class="info-value">{{ currentItem?.toPick | date: 'shortDate' }}</span>
-      </div>
-
-      <div class="info-row">
-        <span class="info-label">Details:</span>
-        <span class="info-value">{{ currentItem?.details }}</span>
-      </div>
-    </mat-card-content>
-  </mat-card>
+<h1 mat-dialog-title>Book Description</h1>
+<div mat-dialog-content>
+  <p>{{ data.description }}</p>
 </div>
+<div mat-dialog-actions>
+  <button mat-button mat-dialog-close>Close</button>
+</div>
+

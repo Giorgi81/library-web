@@ -1,8 +1,9 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Inject, OnInit} from '@angular/core';
 import {ActivatedRoute, Router, RouterLink} from "@angular/router";
 import {MaterialModule} from "../material/material.module";
 import {DatePipe} from "@angular/common";
 import {DetailsService} from "../shared/services/details.service";
+import {MAT_DIALOG_DATA} from "@angular/material/dialog";
 
 @Component({
   selector: 'app-desc',
@@ -11,26 +12,12 @@ import {DetailsService} from "../shared/services/details.service";
   templateUrl: './desc.component.html',
   styleUrl: './desc.component.scss'
 })
-export class DescComponent implements OnInit{
-
-  currentItem: any;
-
-  constructor(
-    private route: ActivatedRoute,
-    private detailsService: DetailsService,
-  ) {
-
-  }
+export class DescComponent {
 
 
-  ngOnInit() {
-    const id = this.route.snapshot.paramMap.get('id');
-    const items : any[] = JSON.parse(localStorage.getItem('postsList') || '');
-    if(items?.length) {
-      this.currentItem = items?.find((item) => item.id == id)
-    }
 
-  }
+  constructor(@Inject(MAT_DIALOG_DATA) public data: { description: string }) {}
+
 
 
 
