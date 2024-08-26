@@ -1,27 +1,31 @@
-# LibraryWeb
+Open Library 📖
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.1.
+Overview
 
-## Development server
+Open Library is an Angular application designed to help librarians manage books within a library. 
+This application allows librarians to:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Add new books to the library's catalog.
 
-## Code scaffolding
+View and manage the details of borrowed books, including tracking which users have borrowed them and the dates of the borrowing period.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Features
 
-## Running unit tests
+User Authentication: Secure login for librarians.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Book Management: Add new books with details such as title, description, and borrowing period information.
 
-## Running end-to-end tests
+Borrowed Book Tracking: View details of books that have been borrowed, including the user who borrowed them and the borrowing period.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+Usage
+
+Login: Access the login page and enter your credentials to authenticate.
+
+Add Books: To add new books, navigate to the main page and enter details such as the book title, description, and borrowing dates.
+
+View description Books: Check the books section to see which books are currently borrowed, including details about the users who borrowed them and the borrowing period.
