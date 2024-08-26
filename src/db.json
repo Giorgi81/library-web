@@ -4,7 +4,7 @@
       "id": 1,
       "book": "Harry Potter",
       "user": "Andrew Smith",
-      "details": "Harry Potter, fictional character, a boy wizard created by British author J.K. Rowling...",
+      "details": "Harry Potter and the Philosopher’s Stone (1997; also published as Harry Potter and the Sorcerer’s Stone), as an orphan who is mistreated by his guardian aunt and uncle and their son. On his 11th birthday Harry discovers that his parents were a witch and a wizard and that he, a wizard himself, has been invited to attend Hogwarts School of Witchcraft and Wizardry. He also learns that his parents had not perished in a car accident, as his aunt and uncle had told him, but that they instead had been murdered by an evil wizard named.",
       "fromPick": "2024-08-01",
       "toPick": "2024-08-15"
     },
@@ -12,7 +12,7 @@
       "id": 2,
       "book": "The Metamorphosis",
       "user": "Chloe Farand",
-      "details": "The Metamorphosis (German: Die Verwandlung), also translated as The Transformation...",
+      "details": "The Metamorphosis\" (German: \"Die Verwandlung\", also sometimes translated as \"The Transformation\") is a novella by Franz Kafka, first published in 1915. It has been cited as one of the seminal works of fiction of the 20th century and is studied in colleges and universities across the Western world. The story begins with a traveling salesman, Gregor Samsa, waking to find himself transformed (metamorphosed) into a large, monstrous insect-like creature. The cause of Samsa's transformation is never revealed, and Kafka never did give an explanation.",
       "fromPick": "2024-08-10",
       "toPick": "2024-08-20"
     },
@@ -20,7 +20,7 @@
       "id": 3,
       "book": "The Brothers Karamazov",
       "user": "Emily Smith",
-      "details": "The Brothers Karamazov (Russian: Бра́тья Карама́зовы, Brát'ya Karamázovy)...",
+      "details": "The Brothers Karamazov, also translated as The Karamazov Brothers, is the last novel by Fyodor Dostoevsky. Dostoevsky spent nearly two years writing The Brothers Karamazov, which was published as a serial. ostoevsky died less than four months after its publication. It has been acclaimed as one of the supreme achievements in world literature.",
       "fromPick": "2024-08-05",
       "toPick": "2024-08-25"
     },
@@ -28,7 +28,7 @@
       "id": 4,
       "book": "The Stranger",
       "user": "Staff Reporter",
-      "details": "Written by Albert Camus in 1942, The Stranger tells the story of the assassination...",
+      "details": "The first of Camus's novels published in his lifetime, the story follows Meursault, an indifferent settler in French Algeria, who, weeks after his mother's funeral, kills an unnamed Arab man in Algiers. The story is divided into two parts, presenting Meursault's first-person narrative before and after the killing.",
       "fromPick": "2024-08-12",
       "toPick": "2024-08-22"
     }
