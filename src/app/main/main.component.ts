@@ -1,10 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
-import { MatDialog } from '@angular/material/dialog';
-import { Router } from '@angular/router';
+import {MatDialog} from '@angular/material/dialog';
+import {Router} from '@angular/router';
 import posts from '../../db.json';
-import { Info } from '../shared/interface/info.interface';
-import { DetailsService } from '../shared/services/details.service';
+import {Info} from '../shared/interface/info.interface';
+import {DetailsService} from '../shared/services/details.service';
 import {DatePipe, NgClass, NgForOf, NgIf} from '@angular/common';
 import {DescComponent} from "../desc/desc.component";
 import {MaterialModule} from "../material/material.module";
@@ -67,7 +67,7 @@ export class MainComponent implements OnInit {
   }
 
   addElement(): void {
-    const { user, book, fromPick, toPick, details } = this.postForm.value;
+    const {user, book, fromPick, toPick, details} = this.postForm.value;
 
     if (this.postForm.valid) {
       const newPost: Info = {
@@ -81,7 +81,7 @@ export class MainComponent implements OnInit {
 
       this.postsList.unshift(newPost);
       this.savePostsToLocalStorage();
-      this.postForm.reset({ fromPick: this.today, toPick: null });
+      this.postForm.reset({fromPick: this.today, toPick: null});
     }
 
     const controls: any = this.postForm?.controls;

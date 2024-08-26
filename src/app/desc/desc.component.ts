@@ -1,8 +1,7 @@
-import {Component, Inject, OnInit} from '@angular/core';
-import {ActivatedRoute, Router, RouterLink} from "@angular/router";
+import {Component, Inject} from '@angular/core';
+import {RouterLink} from "@angular/router";
 import {MaterialModule} from "../material/material.module";
 import {DatePipe} from "@angular/common";
-import {DetailsService} from "../shared/services/details.service";
 import {MAT_DIALOG_DATA} from "@angular/material/dialog";
 
 @Component({
@@ -14,11 +13,7 @@ import {MAT_DIALOG_DATA} from "@angular/material/dialog";
 })
 export class DescComponent {
 
+  constructor(@Inject(MAT_DIALOG_DATA) public data: { description: string }) {
 
-
-  constructor(@Inject(MAT_DIALOG_DATA) public data: { description: string }) {}
-
-
-
-
+  }
 }

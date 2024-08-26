@@ -8,9 +8,7 @@ import {Info} from "../interface/info.interface";
 })
 export class DetailsService {
 
-
   private item!: Info | undefined;
-
 
   setItem(itemReceived: Info) {
     this.item = itemReceived;

@@ -4,7 +4,7 @@
       <div class="inputs">
         <mat-form-field appearance="outline" class="full-width stylish-input">
           <mat-label>User</mat-label>
-          <input matInput type="text" formControlName="user" placeholder="Enter User" />
+          <input matInput type="text" formControlName="user" placeholder="Enter User"/>
           <mat-error *ngIf="postForm.get('user')?.hasError('required') && postForm.get('user')?.touched">
             User is required.
           </mat-error>
@@ -15,7 +15,7 @@
 
         <mat-form-field appearance="outline" class="full-width stylish-input">
           <mat-label>Book</mat-label>
-          <input matInput type="text" formControlName="book" placeholder="Enter Book Title" />
+          <input matInput type="text" formControlName="book" placeholder="Enter Book Title"/>
           <mat-error *ngIf="postForm.get('book')?.hasError('required') && postForm.get('book')?.touched">
             Book is required.
           </mat-error>
