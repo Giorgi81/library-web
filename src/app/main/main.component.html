@@ -40,7 +40,7 @@
       <div class="date-pickers">
         <mat-form-field appearance="outline" class="full-width stylish-input">
           <mat-label>Take Book From</mat-label>
-          <input matInput [matDatepicker]="fromPicker" formControlName="fromPick" [min]="today" [max]="today" >
+          <input matInput [matDatepicker]="fromPicker" formControlName="fromPick" [min]="today" [max]="today" readonly>
           <mat-datepicker-toggle matIconSuffix [for]="fromPicker"></mat-datepicker-toggle>
           <mat-datepicker #fromPicker></mat-datepicker>
           <mat-error *ngIf="postForm.get('fromPick')?.hasError('required') && postForm.get('fromPick')?.touched">
@@ -50,7 +50,7 @@
 
         <mat-form-field appearance="outline" class="full-width stylish-input">
           <mat-label>Take Book To</mat-label>
-          <input matInput [matDatepicker]="toPicker" formControlName="toPick" [min]="today">
+          <input matInput [matDatepicker]="toPicker" formControlName="toPick" [min]="today" readonly>
           <mat-datepicker-toggle matIconSuffix [for]="toPicker"></mat-datepicker-toggle>
           <mat-datepicker #toPicker></mat-datepicker>
           <mat-error *ngIf="postForm.get('toPick')?.hasError('required') && postForm.get('toPick')?.touched">
@@ -58,6 +58,7 @@
           </mat-error>
         </mat-form-field>
       </div>
+
 
       <button mat-flat-button color="accent" type="submit" [disabled]="postForm.invalid" class="submit-btn">
         Add Book
