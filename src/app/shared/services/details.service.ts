@@ -13,8 +13,4 @@ export class DetailsService {
   setItem(itemReceived: Info) {
     this.item = itemReceived;
   }
-
-  getItem() {
-    return this.item;
-  }
 }

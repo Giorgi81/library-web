@@ -27,7 +27,6 @@ export class MainComponent implements OnInit {
   today = new Date();
   postForm: FormGroup;
   postsList: Info[] = [];
-  currentItem: Info | undefined;
   isAddingPost: boolean = false;
 
   constructor(
@@ -50,7 +49,6 @@ export class MainComponent implements OnInit {
   ngOnInit(): void {
     const storedPostsList = JSON.parse(localStorage.getItem('postsList') || '[]');
     this.postsList = storedPostsList.length ? storedPostsList : posts.posts;
-    this.currentItem = this.detailsService.getItem();
   }
 
   goToDetailsPage(id: number): void {

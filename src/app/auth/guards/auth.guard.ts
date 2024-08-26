@@ -1,5 +1,5 @@
-import {CanActivateFn, Router} from '@angular/router';
+import {CanActivateFn} from '@angular/router';
 
 export const authGuard: CanActivateFn = () => {
-  return !!localStorage.getItem('user')
+  return !!localStorage.getItem('loginData') && JSON.parse(localStorage.getItem('loginData') as string).loginData;
 };
